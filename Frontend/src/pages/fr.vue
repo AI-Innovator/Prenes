@@ -32,7 +32,6 @@
 
 <script>
 import Header from '../components/Header.vue';
-import faceRecognitionLib from "facerecognition-sdk.js";
 
 export default {
   name: "fr",
@@ -41,7 +40,6 @@ export default {
   },
   methods: {
     test() {
-      console.log(faceRecognitionLib.add(1, 2));
     }
   }
 }

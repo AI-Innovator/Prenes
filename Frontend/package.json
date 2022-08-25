@@ -1,5 +1,5 @@
 {
-  "name": "FR_Demo",
+  "name": "Prenes",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -10,7 +10,6 @@
   "dependencies": {
     "@fortawesome/vue-fontawesome": "^2.0.6",
     "axios": "^0.26.1",
-    "facerecognition-sdk.js": "^1.0.2",
     "notiwind": "^1.2.5",
     "require": "^2.4.20",
     "vue": "^3.2.25",

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="min-h-screen bg-purple-400 flex justify-center items-center">
-      <div class="absolute w-60 h-60 rounded-xl bg-purple-300 -top-5 -left-16 z-0 transform rotate-45 hidden md:block"></div>
-      <div class=" absolute w-48 h-48 rounded-xl bg-purple-300 -bottom-6 -right-10 transform rotate-12 hidden md:bloc"></div>
+    <div class="min-h-screen bg-green-600 flex justify-center items-center">
+      <div class="absolute w-60 h-60 rounded-xl bg-green-300 -top-5 -left-16 z-0 transform rotate-45 hidden md:block"></div>
+      <div class=" absolute w-48 h-48 rounded-xl bg-green-300 -bottom-6 -right-10 transform rotate-12 hidden md:bloc"></div>
       <div class="md:py-12 py-4 md:px-12 bg-white rounded-2xl shadow-xl z-20">
         <div>
           <h1 class="text-3xl font-bold text-center mb-4 cursor-pointer">
@@ -20,7 +20,7 @@
             <input type="password" name="password" v-model="password" placeholder="Password" class=" block text-sm py-3 px-4 rounded-lg w-full border outline-none"/>
           </div>
           <div class="text-center mt-6">
-            <input type="submit" class="py-3 w-64 text-xl text-white bg-purple-400 rounded-2xl" value="Create Account">
+            <input type="submit" class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-700 hover:bg-green-400" value="Create Account">
             <p class="mt-4 text-sm">
               Already Have An Account?
               <span class="underline cursor-pointer">
