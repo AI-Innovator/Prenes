@@ -71,7 +71,7 @@
       <div class="p-6">
         <h5 class="text-gray-900 text-xl font-medium mb-2">Removal and Cartoon</h5>
         <p class="text-gray-700 text-base mb-4">
-          Remove background from the image and cartoonize the object.
+          This app remove background from the image and cartoonize the object.
         </p>
         <a href="http://34.136.19.247/" class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-700 hover:bg-green-400">Demo</a>
       </div>
