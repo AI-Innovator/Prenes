@@ -11,11 +11,11 @@
           </p>
         </div>
         <div class="space-y-4">
-          <input type="text" v-model="form.username" placeholder="Email Address" class="block text-sm py-3 px-4 rounded-lg w-full border outline-none"/>
+          <input type="text" v-model="form.username" placeholder="Username" class="block text-sm py-3 px-4 rounded-lg w-full border outline-none"/>
           <input type="password" v-model="form.password" placeholder="Password" class="block text-sm py-3 px-4 rounded-lg w-full border outline-none"/>
         </div>
         <div class="text-center mt-6">
-          <button @click="log_in" class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-700 hover:bg-green-400">Signin</button>
+          <button @click="login" class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-700 hover:bg-green-400">Signin</button>
           <p class="mt-4 text-sm">
             Don't Have An Account?
             <span class="underline cursor-pointer">
@@ -39,8 +39,6 @@ export default {
     return {
       picked: "Mode2",
       image: null,
-      email: null,
-      password: null,
       form: {
         username: null,
         password: null
@@ -77,11 +75,10 @@ export default {
       // })
     },
 
-    async log_in() {
+    async login() {
       axios.post("https://csort.herokuapp.com/accounts/login",
           this.form
-      )
-          .then((res) => {
+      ).then((res) => {
             this.$notify({group: "success", title: "User Enrollment Result", text: "The user login success"}, 2000)
             this.$store.commit("face/set", res.data["user_email"])
             this.$router.push("/dashboard")

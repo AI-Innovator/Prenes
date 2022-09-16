@@ -12,25 +12,26 @@
             Create an account to enjoy all the services without any ads for free!
           </p>
         </div>
-        <form @submit.prevent="signup">
-          <div class="space-y-4">
-            <input type="text" name="email" v-model="email" placeholder="Email Addres" class=" block text-sm py-3 px-4 rounded-lg w-full border outline-none"/>
-            <input type="text" name="username" v-model="username" placeholder="Username" class=" block text-sm py-3 px-4 rounded-lg w-full border outline-none"/>
+        <div class="space-y-4">
+          <input type="text" name="username" v-model="form.username" placeholder="Username" class=" block text-sm py-3 px-4 rounded-lg w-full border outline-none"/>
+          <input type="text" name="firstname" v-model="form.first_name" placeholder="First Name" class=" block text-sm py-3 px-4 rounded-lg w-full border outline-none"/>
+          <input type="text" name="lastname" v-model="form.last_name" placeholder="Last Name" class=" block text-sm py-3 px-4 rounded-lg w-full border outline-none"/>
+          <input type="text" name="email" v-model="form.email" placeholder="Email Address" class=" block text-sm py-3 px-4 rounded-lg w-full border outline-none"/>
 <!--            <input type="date" name="date" v-model="date" placeholder="Date of birth" class=" block text-sm py-3 px-4 rounded-lg w-full border outline-none"/>-->
-            <input type="password" name="password" v-model="password" placeholder="Password" class=" block text-sm py-3 px-4 rounded-lg w-full border outline-none"/>
-          </div>
-          <div class="text-center mt-6">
-            <input type="submit" class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-700 hover:bg-green-400" value="Create Account">
-            <p class="mt-4 text-sm">
-              Already Have An Account?
-              <span class="underline cursor-pointer">
-                <router-link to="/auth/signin">
-                  Sign In
-                </router-link>
-              </span>
-            </p>
-          </div>
-        </form>
+          <input type="password" name="password" v-model="form.password" placeholder="Input Password" class=" block text-sm py-3 px-4 rounded-lg w-full border outline-none"/>
+          <input type="password" name="password" v-model="form.password2" placeholder="Confirm Password" class=" block text-sm py-3 px-4 rounded-lg w-full border outline-none"/>
+        </div>
+        <div class="text-center mt-6">
+          <button @click="signup" class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-700 hover:bg-green-400">Create Account</button>
+          <p class="mt-4 text-sm">
+            Already Have An Account?
+            <span class="underline cursor-pointer">
+              <router-link to="/auth/signin">
+                Sign In
+              </router-link>
+            </span>
+          </p>
+        </div>
       </div>
       <div
         class="
@@ -69,12 +70,17 @@ import axios from "axios";
 export default {
   data() {
     return {
-      email: null,
-      username: null,
       date: null,
-      password: null,
       registered: false,
-      image: null
+      image: null,
+      form: {
+        username: null,
+        first_name: null,
+        last_name: null,
+        email: null,
+        password: null,
+        password2: null,
+      }
     }
   },
   computed: {
@@ -84,43 +90,35 @@ export default {
   },
   methods: {
     async signup() {
-      if (this.email === null) {
+      if (this.form.email === null) {
         this.$notify({group: "error", title: "SignUp", text: "Please fill out the email field"}, 2000)
         return
       }
 
-      if (this.username === null) {
+      if (this.form.username === null) {
         this.$notify({group: "error", title: "SignUp", text: "Please fill out the username field"}, 2000)
         return
       }
 
-      if (this.password === null) {
+      if (this.form.password === null) {
         this.$notify({group: "error", title: "SignUp", text: "Please fill out the password field"}, 2000)
-
         return
       }
 
-      this.take_photo()
+      axios.post("https://csort.herokuapp.com/accounts/register",
+          this.form
+      ).then((res) => {
+            this.$notify({group: "success", title: "User Enrollment Result", text: "The user login success"}, 2000)
+            // this.$store.commit("face/set", res.data["user_email"])
+            this.$router.push("/dashboard")
+          })
+          .catch((error) => {
+            this.$notify({group: "error", title: "User Enrollment Result", text: "The user login failed"}, 2000)
+          })
+          .finally(() => {
 
-      const response = await axios.post(
-          "http://127.0.0.1:8000/signup",
-          {"user_email": this.email, "user_name": this.username, "user_pass": this.password, "signup_date": this.date}
-      );
+          })
 
-      this.registered = response.data["created"]
-      if (this.registered === true) {
-        const response = await axios.post(
-            "http://127.0.0.1:8000/face/enroll/feature",
-            {
-              "image": this.image,
-              "user_email": this.email
-            }
-        )
-
-        this.$store.commit('face/set', this.email)
-        this.close_camera()
-        await this.$router.push("/dashboard")
-      }
     },
 
     close_camera() {
