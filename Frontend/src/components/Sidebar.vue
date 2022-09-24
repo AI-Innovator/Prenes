@@ -65,7 +65,7 @@
           <span class="mx-4">Dashboard</span>
         </router-link>
         <p class="pl-4 my-2 text-xs font-semibold mb-4 text-gray-400">
-          Examples
+          Products
         </p>
 
         <router-link
@@ -97,7 +97,7 @@
             />
           </svg>
 
-          <span class="mx-4">UI Elements</span>
+          <span class="mx-4">Shot Separator</span>
         </router-link>
 
         <router-link
@@ -125,7 +125,7 @@
             />
           </svg>
 
-          <span class="mx-4">Tables</span>
+          <span class="mx-4">Face Recognition SDK</span>
         </router-link>
 
         <router-link
@@ -144,7 +144,7 @@
             />
           </svg>
 
-          <span class="mx-4">Forms</span>
+          <span class="mx-4">CleanOCR</span>
         </router-link>
 
         <router-link
@@ -166,7 +166,7 @@
             />
           </svg>
 
-          <span class="mx-4">Cards</span>
+          <span class="mx-4">Video Analytic System</span>
         </router-link>
 
         <router-link
@@ -191,7 +191,7 @@
             />
           </svg>
 
-          <span class="mx-4">Modal</span>
+          <span class="mx-4">Removal and Cartoon</span>
         </router-link>
         <router-link
           class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
@@ -208,7 +208,7 @@
             <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
           </svg>
 
-          <span class="mx-4">Charts</span>
+          <span class="mx-4">Face Analytics SDK</span>
         </router-link>
         <router-link
           class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
@@ -221,14 +221,14 @@
             />
           </svg>
 
-          <span class="mx-4">Blank</span>
+          <span class="mx-4">Face Attendance System</span>
         </router-link>
         <p class="pl-4 text-xs my-2 font-semibold mb-4 text-gray-400">About</p>
         <a
           target="_blank"
           class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
           :class="[$route.name === 'Blank' ? activeClass : inactiveClass]"
-          href="https://github.com/tal7aouy"
+          href="https://github.com/AI-Innovator"
         >
           <svg
             class="w-5 h-5 fill-current"
