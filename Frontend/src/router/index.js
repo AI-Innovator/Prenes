@@ -4,6 +4,7 @@ import Dashboard from '../pages/home.vue'
 import FaceRecognition from '../pages/fr.vue'
 import SignIn from '../pages/auth/login.vue'
 import SignUp from '../pages/auth/register.vue'
+import BackgroundCheck from '../pages/BackgroundCheck.vue'
 
 const routes = [
     {
@@ -30,6 +31,11 @@ const routes = [
         path: '/fr',
         name: 'Face Recognition',
         component: FaceRecognition
+    },
+    {
+        path: '/backgroundcheck',
+        name: 'Background Check',
+        component: BackgroundCheck
     },
 
 ]

@@ -129,8 +129,7 @@
               <p class="text-sm mx-2">
                 <span class="font-bold" href="#">Evan Josh</span> replied on the
                 <span class="font-bold text-indigo-400" href="#"
-                  >Upload Image</span
-                >
+                  >Upload KYC Image</span>
                 artical . 2m
               </p>
             </a>
@@ -201,7 +200,7 @@
               />
               <p class="text-sm mx-2">
                 <span class="font-bold" href="#">Abigail Bennett</span>
-                start following you . 3h
+                start background check . 3h
               </p>
             </a>
           </div>
