@@ -29,14 +29,14 @@
     </div>
     <div class="flex-1 flex flex-col overflow-hidden">
       <AdminHeader/>
-      <form class="flex flex-col w-1/2 gap-16 py-8 mx-auto my-0">
-        <ul class="relative flex flex-col w-full gap-16 before:absolute before:content-[''] before:z-[-1] before:top-6 before:left-3 before:w-[1px] before:h-[calc(100%-24px)] before:mx-auto before:my-0 before:bg-fg">
-        <span class="flex flex-col w-full gap-6 my-0 mx-auto">
+      <form class="flex flex-col w-1/2 gap-16 py-2 mx-auto my-0">
+        <ul class="relative flex flex-col w-full gap-6 before:absolute before:content-[''] before:z-[-1] before:top-6 before:left-3 before:w-[1px] before:h-[calc(100%-24px)] before:mx-auto before:my-0 before:bg-fg">
+        <div class="flex flex-col w-full gap-6 my-0 mx-auto">
           <Input number="1" label="Your full name" placeholder="Antonio Pataro" name="name" type="name"></Input>
           <Input number="2" label="Your e-mail" placeholder="antoniopatarodev@gmail.com" name="email" type="email"></Input>
           <Input number="3" label="Your Social Security Number" placeholder="xxx-xx-xxx" name="ssn" type="password"></Input>
           <Input number="4" label="Your Birthday" placeholder="xxx-xx-xxx" name="birthday" type="date"></Input>
-        </span>
+        </div>
 
         <div class="flex justify-center gap-6">
           <div class="rounded-lg shadow-xl bg-gray-50 lg:w-1/2">
@@ -83,11 +83,11 @@
 
           </div>
         </div>
-        <span class="flex w-full justify-end gap-4">
+        <div class="flex w-full justify-end">
           <button disabled class="whitespace-nowrap inline-flex items-center justify-center p-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-700 hover:bg-green-600">
             Submit
           </button>
-        </span>
+        </div>
       </ul>
       </form>
     </div>

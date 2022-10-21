@@ -95,7 +95,7 @@
       <div class="p-6">
         <h5 class="text-gray-900 text-xl font-medium mb-2">KYC Verification Service</h5>
         <p class="text-gray-700 text-base mb-4">
-          This tool makes background check process for employeers and identification for KYC documents.
+          This tool makes background check process for employers and identification for KYC documents.
         </p>
 <!--        <router-link to="/auth/signin" class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-bold text-white bg-green-700 hover:bg-green-400" hidden>Try it</router-link>-->
       </div>
