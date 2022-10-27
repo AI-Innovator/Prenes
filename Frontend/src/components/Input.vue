@@ -6,6 +6,7 @@ defineProps({
   name: String,
   number: String,
   label: String,
+  model: String,
   placeholder: String,
 });
 
