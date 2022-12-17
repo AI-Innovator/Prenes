@@ -76,8 +76,14 @@ export default {
     },
 
     async login() {
-      axios.post("https://csort.herokuapp.com/accounts/login",
-          this.form
+      const headers = {
+        "X-RapidAPI-Key": "d795214830msh9a862b18ec8afd2p152901jsn6bc4b3d61b43",
+        "X-RapidAPI-Host": "csort.p.rapidapi.com"
+      };
+
+      axios.post("https://csort.p.rapidapi.com/accounts/login",
+          this.form,
+          {headers}
       ).then((res) => {
             this.$notify({group: "success", title: "User Enrollment Result", text: "The user login success"}, 2000)
             this.$store.commit("face/set", res.data["user_email"])

@@ -172,13 +172,19 @@ export default {
       if (this.hardware_key === null || this.year === null || this.month === null || this.day === null)
         return;
 
-      axios.post("https://csort.herokuapp.com/accounts/generate",
+      const headers = {
+        "X-RapidAPI-Key": "d795214830msh9a862b18ec8afd2p152901jsn6bc4b3d61b43",
+        "X-RapidAPI-Host": "csort.p.rapidapi.com"
+      };
+
+      axios.post("https://csort.p.rapidapi.com/accounts/generate",
           {
             "hardware_key": this.hardware_key,
             "year": parseInt(this.year),
             "month": parseInt(this.month),
             "day": parseInt(this.day)
-          }
+          },
+          {headers}
       )
           .then((res) => {
             this.license = res.data['license']
