@@ -133,9 +133,9 @@
       <div class="p-6">
         <h5 class="text-gray-900 text-xl font-medium mb-2">Carbon Management System</h5>
         <p class="text-gray-700 text-base mb-4">
-          Easiest way to start creating NFT Art using Artificial Intelligence. Start creating in minutes!
+          There are all 3 products like web scraping and AI-driven ESG report analysis and mapping engine to emission factors.
         </p>
-        <a href="https://wa.me/+14422295661" class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-bold text-white bg-green-700 hover:bg-green-400"><i id="social-whatsapp" class="fab fa-whatsapp text-xl social pr-2"></i>Demo</a>
+        <router-link to="/cms" class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-bold text-white bg-green-700 hover:bg-green-400"><i id="social-whatsapp" class="fas fa-sun text-xl social pr-2"></i>Try it</router-link>
       </div>
     </div>
     <div class="rounded-lg shadow-lg bg-white max-w-xs m-2">

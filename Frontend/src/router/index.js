@@ -5,6 +5,7 @@ import FaceRecognition from '../pages/fr.vue'
 import SignIn from '../pages/auth/login.vue'
 import SignUp from '../pages/auth/register.vue'
 import BackgroundCheck from '../pages/BackgroundCheck.vue'
+import CarbonManagement from '../pages/cms.vue'
 
 const routes = [
     {
@@ -37,7 +38,11 @@ const routes = [
         name: 'Background Check',
         component: BackgroundCheck
     },
-
+    {
+        path: '/cms',
+        name: 'Carbon Management System',
+        component: CarbonManagement
+    },
 ]
 
 const router = createRouter({ history: createWebHistory(), routes })
